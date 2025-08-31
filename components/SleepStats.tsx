@@ -158,7 +158,7 @@ export default function SleepStats({ userId }: SleepStatsProps) {
               <YAxis />
               <Tooltip 
                 formatter={(value, name) => [
-                  name === 'duration' ? `${value.toFixed(1)}h` : value,
+                  name === 'duration' ? `${typeof value === 'number' ? value.toFixed(1) : value}h` : value,
                   name === 'duration' ? 'Thời gian ngủ' : 'Chất lượng'
                 ]}
               />
